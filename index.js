@@ -10,22 +10,36 @@
     recognition.interimResults = true;
 
     const english = document.querySelector('#english');
+    const genZ = document.querySelector('#gen-z');
     let p = document.createElement('p');
+    let p2 = document.createElement('p');
+
     english.appendChild(p);
+    genZ.appendChild(p2);
 
     window.translator = {
         cases: [
-            ['what up', 'biiitch what is uuuuup'],
-            ['awesome', 'lit'],
-            ['me', 'ya boi'],
-            ['okay', 'yeet haw'],
-            ['is it', 'it be'],
-            ['are you', 'yall'],
-            ['are', 'be'],
+            [' what up ', ' biiitch what is uuuuup '],
+            [' awesome ', ' lit '],
+            [' me ', ' ya boi '],
+            [' my ', ' ya bois '],
+            [' i ', ' ya boi '],
+
+            [' okay ', ' yeet haw '],
+            [' is it ', ' it be '],
+            [' are you ', ' yall '],
+            [' are ', ' be '],
+            ['it is', ' it be '],
+            ['it\'s', ' it be '],
+            [' you', ' you 🥺 '],
+            [' working ', ' tiktok dancing ']
+
 
         ],
         translate: (english) => {
-            let translation = english;
+            let translation = english.toLowerCase();
+
+            // ok it is awesome. i had a good time working with you
 
             // cases lol
             for (c of window.translator.cases) {
@@ -38,6 +52,9 @@
             window.speechSynthesis.speak(new SpeechSynthesisUtterance(translation));
 
             // print
+            p2.textContent = translation;
+
+
             console.log(translation)
             window.translator.lastTranslation = translation;
 
