@@ -24,20 +24,18 @@
             [' me ', ' ya boi '],
             [' my ', ' ya bois '],
             [' i ', ' ya boi '],
-
             [' okay ', ' yeet haw '],
             [' is it ', ' it be '],
             [' are you ', ' yall '],
             [' are ', ' be '],
-            ['it is', ' it be '],
-            ['it\'s', ' it be '],
-            [' you', ' you 🥺 '],
+            [' it is ', ' it be '],
+            [' it\'s ', ' it be '],
+            [' you ', ' you 🥺 '],
             [' working ', ' tiktok dancing ']
-
 
         ],
         translate: (english) => {
-            let translation = english.toLowerCase();
+            let translation = ` ${english.toLowerCase()} `;
 
             // ok it is awesome. i had a good time working with you
 
