@@ -19,19 +19,25 @@
 
     window.translator = {
         cases: [
-            [' what up ', ' biiitch what is uuuuup '],
-            [' awesome ', ' lit '],
-            [' me ', ' ya boi '],
-            [' my ', ' ya bois '],
-            [' i ', ' ya boi '],
-            [' okay ', ' yeet haw '],
-            [' is it ', ' it be '],
-            [' are you ', ' yall '],
-            [' are ', ' be '],
-            [' it is ', ' it be '],
-            [' it\'s ', ' it be '],
-            [' you ', ' you 🥺 '],
-            [' working ', ' tiktok dancing ']
+            ['what up', 'biiitch what is uuuuup'],
+            ['what\'s up', 'biiitch what is uuuuup'],
+            ['awesome', 'lit'],
+            ['me', 'ya boi'],
+            ['my', 'ya bois'],
+            ['i', 'ya boi'],
+            ['okay', 'yeet haw'],
+            ['is it', 'it be'],
+            ['are you', 'yall'],
+            ['are', 'be'],
+            ['it is', 'it be'],
+            ['it\'s', 'it be'],
+            ['you', 'you 🥺'],
+            ['working', 'tiktok dancing'],
+            ['challenge', 'tiktok challenge'],
+            ['what\'s', 'what be'],
+            ['an lit', 'a lit'],
+
+
 
         ],
         translate: (english) => {
@@ -39,7 +45,7 @@
 
             // cases lol
             for (c of window.translator.cases) {
-                translation = translation.replace(c[0], c[1]);
+                translation = translation.replace(` ${c[0]} `, ` ${c[1]} `);
             }
 
 
@@ -73,10 +79,10 @@
         p.textContent = transcript;
         window.translator.lastResult = transcript;
 
-        if (e.results[0].isFinal) {
-            p = document.createElement('p');
-            english.appendChild(p);
-        }
+        // if (e.results[0].isFinal) {
+        //     p = document.createElement('p');
+        //     english.appendChild(p);
+        // }
 
     })
 
