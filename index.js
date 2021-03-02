@@ -14,14 +14,24 @@
     english.appendChild(p);
 
     window.translator = {
+        cases: [
+            ['what up', 'biiitch what is uuuuup'],
+            ['awesome', 'lit'],
+            ['me', 'ya boi'],
+            ['okay', 'yeet haw'],
+            ['is it', 'it be'],
+            ['are you', 'yall'],
+            ['are', 'be'],
+
+        ],
         translate: (english) => {
             let translation = english;
 
             // cases lol
-            translation = translation.replace('what up', 'biiitch what is uuuuup');
-            translation = translation.replace('awesome', 'lit');
-            translation = translation.replace('me', 'ya boi');
-            translation = translation.replace('okay', 'yeet haw');
+            for (c of window.translator.cases) {
+                translation = translation.replace(c[0], c[1]);
+            }
+
 
 
             // make computer talk
