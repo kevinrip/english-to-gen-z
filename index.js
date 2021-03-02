@@ -37,8 +37,6 @@
         translate: (english) => {
             let translation = ` ${english.toLowerCase()} `;
 
-            // ok it is awesome. i had a good time working with you
-
             // cases lol
             for (c of window.translator.cases) {
                 translation = translation.replace(c[0], c[1]);
