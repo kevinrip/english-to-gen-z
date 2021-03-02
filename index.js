@@ -56,6 +56,11 @@
 
 
             console.log(translation)
+
+            heap.track('translate', {
+                original: english,
+                translation
+            })
             window.translator.lastTranslation = translation;
 
         },
